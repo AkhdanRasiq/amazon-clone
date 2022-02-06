@@ -9,6 +9,7 @@ This repository containing clone version of Amazon for Education purpose only!
 3. Sass
 4. Firebase
 5. Jest
+6. Storybook
 
 <br />
 <br />
@@ -66,4 +67,9 @@ npm run test:detect-leak
 ### Lints and fixes files
 ```
 npm run lint
+```
+
+### Run Storybook and test components with user interface
+```
+npm run storybook
 ```
