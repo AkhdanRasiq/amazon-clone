@@ -1,3 +1,5 @@
+import React from 'react'
+
 import HeaderSearch from './HeaderSearch'
 import HeaderNav from './HeaderNav'
 

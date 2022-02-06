@@ -2,6 +2,16 @@
 
 This repository containing clone version of Amazon for Education purpose only!
 
+# TECH STACK
+
+1. ReactJS (TypeScript)
+2. Eslint
+3. Sass
+4. Firebase
+
+<br />
+<br />
+
 # QUICK ACCESS
 
 FRONTEND : Under Construction!
