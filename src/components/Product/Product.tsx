@@ -1,23 +1,23 @@
-import React from 'react'
+import React, { Props } from 'react'
 
-function Product() {
+function Product({a_strId, a_strTitle, a_iPrice, a_iRating, a_strImage} : any) {
   return (
     <div className="product">
       <div className="productInfo">
-        <p>The Product Title</p>
+        <p>{a_strTitle}</p>
         <p className="productPrice">
           <small>$</small>
-          <strong>19.99</strong>
+          <strong>{a_iPrice}</strong>
         </p>
 
         <div className="productRating">
-          <p>⭐</p>
-          <p>⭐</p>
-          <p>⭐</p>
+          {Array(a_iRating).fill(Array(a_iRating)).map((_, i) => (
+            <p>⭐</p>
+          ))}
         </div>
       </div>
 
-      <img src="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg" alt="amazon_banner" />
+      <img src={a_strImage} alt="product_img" />
       <button>Add to Basket</button>
     </div>
   )
