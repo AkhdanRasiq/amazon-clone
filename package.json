@@ -24,9 +24,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
+    "eject": "react-scripts eject",
     "lint": "eslint src/**/*.ts src/**/*.tsx",
-    "eject": "react-scripts eject"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:unit-band": "jest --runInBand",
+    "test:detect-leak": "jest --detectOpenHandles"
   },
   "eslintConfig": {
     "extends": [
