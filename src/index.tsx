@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/scss/styles.scss';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+
+import router from './static/router'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        {router.map((data) => (
+          <Route key={data.id} path={data.path} element={<data.element />} />
+        ))}
+      </Routes>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
