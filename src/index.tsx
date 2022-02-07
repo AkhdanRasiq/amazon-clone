@@ -5,16 +5,20 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import router from './static/router'
+import Header from './components/Header/Header';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <Routes>
-        {router.map((data) => (
-          <Route key={data.id} path={data.path} element={<data.element />} />
-        ))}
-      </Routes>
-    </Router>
+    <div className="App">
+      <Router>
+        <Header />
+        <Routes>
+          {router.map((data) => (
+            <Route key={data.id} path={data.path} element={<data.element />} />
+          ))}
+        </Routes>
+      </Router>
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );

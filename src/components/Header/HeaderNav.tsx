@@ -1,6 +1,7 @@
 import React from 'react'
 
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket"
+import { Link } from 'react-router-dom'
 
 function HeaderNav() {
   return (
@@ -32,12 +33,14 @@ function HeaderNav() {
         </span>
       </div>
 
-      <div className="headerNavOptionBasket">
-        <ShoppingBasketIcon />
-        <span className="headerNavOptionItem headerNavBasketCount">
-          <p>0</p>
-        </span>
-      </div>
+      <Link to="/checkout">
+        <div className="headerNavOptionBasket">
+          <ShoppingBasketIcon />
+          <span className="headerNavOptionItem headerNavBasketCount">
+            <p>0</p>
+          </span>
+        </div>
+      </Link>
     </div>
   )
 }
