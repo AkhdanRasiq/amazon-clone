@@ -1,7 +1,10 @@
+import React from 'react'
+
 import Home from '../../../components/Home/Home'
 import '../../../assets/scss/styles.scss'
 
-import StoryRouter from 'storybook-react-router'
+// import StoryRouter from 'storybook-react-router'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 
 export default {
@@ -11,14 +14,15 @@ export default {
   argTypes: {
     submit: { action: 'submitted' }
   }
-}
+} as ComponentMeta<typeof Home>
 
-const Template = function (args: any, { argTypes }: any) {
-  return (
-      <div>
-        <Home />
-      </div>
-  )
-}
+const Template: ComponentStory<typeof Home> = (args: any) => <Home {...args} />
+
+
+// const Template = function (args: any, { argTypes }: any) {
+//   return (
+//     <Home />
+//   )
+// }
 
 export const Default: any = Template.bind({})

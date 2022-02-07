@@ -1,7 +1,10 @@
+import React from 'react'
+
 import Header from '../../../components/Header/Header'
 import '../../../assets/scss/styles.scss'
 
-import StoryRouter from 'storybook-react-router'
+// import StoryRouter from 'storybook-react-router'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 
 export default {
@@ -11,14 +14,15 @@ export default {
   argTypes: {
     submit: { action: 'submitted' }
   }
-}
+} as ComponentMeta<typeof Header>
 
-const Template = function (args: any, { argTypes }: any) {
-  return (
-      <div>
-        <Header />
-      </div>
-  )
-}
+const Template: ComponentStory<typeof Header> = (args: any) => <Header {...args} />
+
+
+// const Template = function (args: any, { argTypes }: any) {
+//   return (
+//     <Header />
+//   )
+// }
 
 export const Default: any = Template.bind({})
