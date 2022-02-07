@@ -1,6 +1,6 @@
 import React from 'react'
 
-type ProductProps = {
+interface ProductProps {
   a_strId     : string;
   a_strTitle  : string;
   a_iPrice    : number;
