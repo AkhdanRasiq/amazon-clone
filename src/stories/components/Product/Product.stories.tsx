@@ -2,20 +2,25 @@ import React from 'react'
 import Product from '../../../components/Product/Product'
 import '../../../assets/scss/styles.scss'
 
-// import StoryRouter from 'storybook-react-router'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
+
+import { store } from '../../../app/store';
+import { Provider } from 'react-redux';
 
 
 export default {
   title: 'Components/Product',
   component: Product,
-  // decorators: [StoryRouter()],
   argTypes: {
     submit: { action: 'submitted' }
   }
 } as ComponentMeta<typeof Product>
 
-const Template: ComponentStory<typeof Product> = (args: any) => <Product {...args} />
+const Template: ComponentStory<typeof Product> = (args: any) => (
+  <Provider store={store}>
+    <Product {...args} />
+  </Provider>
+)
 
 
 export const Default: any = Template.bind({})

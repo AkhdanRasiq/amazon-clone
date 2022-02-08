@@ -19,10 +19,10 @@ const productSlice = createSlice({
   }
 })
 
-export const selectProductList = (state: RootState) => state.products.productList;
-
 export const {
   addProduct
 } = productSlice.actions
+
+export const selectProductList = (state: RootState) => state.products.productList
 
 export default productSlice.reducer
