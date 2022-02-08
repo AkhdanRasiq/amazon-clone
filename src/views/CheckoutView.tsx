@@ -1,13 +1,11 @@
 import React from 'react'
 
-import Header from '../components/Header/Header';
+// import Header from '../components/Header/Header';
+import Checkout from '../components/Checkout/Checkout';
 
 function CheckoutView() {
   return (
-    <div className="App">
-      <Header />
-      <h1>WELCOM TO CHECKOUT!</h1>
-    </div>
+    <Checkout />
   );
 }
 

@@ -4,17 +4,26 @@ import './assets/scss/styles.scss';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
+import { store } from './app/store';
+import { Provider } from 'react-redux';
+
 import router from './static/router'
+import Header from './components/Header/Header';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <Routes>
-        {router.map((data) => (
-          <Route key={data.id} path={data.path} element={<data.element />} />
-        ))}
-      </Routes>
-    </Router>
+    <Provider store={store}>
+      <div className="App">
+        <Router>
+          <Header />
+          <Routes>
+            {router.map((data) => (
+              <Route key={data.id} path={data.path} element={<data.element />} />
+            ))}
+          </Routes>
+        </Router>
+      </div>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

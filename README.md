@@ -2,14 +2,18 @@
 
 This repository containing clone version of Amazon for Education purpose only!
 
-# TECH STACK
+## MAIN TECH STACK
 
 1. ReactJS (TypeScript)
-2. Eslint
+2. Redux
 3. Sass
-4. Firebase
-5. Jest
-6. Storybook
+
+## DEV TECH STACK
+
+1. Eslint
+2. Firebase
+3. Jest
+4. Storybook
 
 <br />
 <br />
