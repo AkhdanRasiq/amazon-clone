@@ -1,0 +1,11 @@
+{
+  "connection": {
+    "protocol"    : "http://",
+    "address"     : "127.0.0.1",
+    "port"        : ":8000"
+  },
+  "api": {
+    "base"        : "/api",
+    "products"    : "/products"
+  }
+}

@@ -4,18 +4,18 @@ import { useAppDispatch } from '../../app/hooks';
 import { addProduct } from '../../features/productSlice'
 
 interface ProductProps {
-  a_strId     : string;
+  a_iId       : number;
   a_strTitle  : string;
   a_iPrice    : number;
   a_iRating   : number;
   a_strImage  : string;
 }
 
-function Product({a_strId, a_strTitle, a_iPrice, a_iRating, a_strImage} : ProductProps) {
+function Product({a_iId, a_strTitle, a_iPrice, a_iRating, a_strImage} : ProductProps) {
   const dispatch = useAppDispatch()
   
   const data = {
-    id: a_strId,
+    id: a_iId,
     title: a_strTitle,
     price: a_iPrice,
     rating: a_iRating,
@@ -37,7 +37,7 @@ function Product({a_strId, a_strTitle, a_iPrice, a_iRating, a_strImage} : Produc
 
         <div className="productRating">
           {Array(a_iRating).fill(Array(a_iRating)).map(() => (
-            <p key={a_strId}>⭐</p>
+            <p key={a_iId}>⭐</p>
           ))}
         </div>
       </div>
