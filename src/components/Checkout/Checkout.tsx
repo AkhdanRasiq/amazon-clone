@@ -9,6 +9,7 @@ function Checkout() {
           <h2 className="checkoutTitle">
             Your Shopping Basket
           </h2>
+
         </div>
       </div>
       <div className="checkoutSubtotal">

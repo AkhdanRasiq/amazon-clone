@@ -26,10 +26,17 @@
 
 .product > button {
   background-color: $light-yellow-color;
+  border-radius: 2px;
+  height: 30px;
   border: 1px solid;
-  margin-top: 35px;
+  margin-top: 20px;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+
+  &:hover {
+    background-color: $light-yellow-dark;
+    cursor: pointer;
+  }
 }
 
 .productPrice {
@@ -38,5 +45,5 @@
 
 .productInfo {
   height: 100px;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
 }

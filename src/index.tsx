@@ -9,11 +9,13 @@ import { Provider } from 'react-redux';
 
 import router from './static/router'
 import Header from './components/Header/Header';
+import AlertCustom from './components/Util/AlertCustom';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <div className="App">
+        <AlertCustom />
         <Router>
           <Header />
           <Routes>

@@ -1,7 +1,9 @@
 import React from 'react'
 
-import { useAppDispatch } from '../../app/hooks';
+import { useAppDispatch } from '../../app/hooks'
 import { addProduct } from '../../features/productSlice'
+import { setAlert } from '../../features/alertSlice'
+
 
 interface ProductProps {
   a_iId       : number;
@@ -24,6 +26,8 @@ function Product({a_iId, a_strTitle, a_iPrice, a_iRating, a_strImage} : ProductP
 
   const addToBasket = () => {
     dispatch(addProduct(data))
+    dispatch(setAlert({ status: true }))
+
   }
 
   return (

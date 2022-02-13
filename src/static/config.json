@@ -7,5 +7,6 @@
   "api": {
     "base"        : "/api",
     "products"    : "/products"
-  }
+  },
+  "alert_show_ms" : 3000
 }
