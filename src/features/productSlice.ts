@@ -1,11 +1,21 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../app/store';
 
-interface ProductState {
-  productList: Array<any>
+
+interface IProduct {
+  id      : number,
+  title   : string,
+  price   : number,
+  rating  : number,
+  image   : string,
+  qty     : number  
 }
 
-const initialState: ProductState = {
+interface IProductList {
+  productList: Array<IProduct>
+}
+
+const initialState: IProductList = {
   productList: []
 }
 
@@ -14,13 +24,28 @@ const productSlice = createSlice({
   initialState,
   reducers: {
     addProduct: (state, action: PayloadAction<any>) => {
-      state.productList.push(action.payload)
+      const sameItem = state.productList.findIndex(item => item.id === action.payload.id)
+
+      if(sameItem !== -1)
+        state.productList[sameItem].qty += 1
+      else
+        state.productList.push(action.payload)
+    },
+    removeProduct: (state, action: PayloadAction<any>) => {
+      const indexProduct = state.productList.findIndex(item => item.id === action.payload.id)
+
+      if(state.productList[indexProduct].qty > 0)
+        state.productList[indexProduct].qty -= 1
+        
+      if(state.productList[indexProduct].qty === 0)
+        state.productList.splice(indexProduct, 1)
     }
   }
 })
 
 export const {
-  addProduct
+  addProduct,
+  removeProduct
 } = productSlice.actions
 
 export const selectProductList = (state: RootState) => state.products.productList

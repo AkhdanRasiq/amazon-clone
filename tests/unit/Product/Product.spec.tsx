@@ -10,7 +10,7 @@ describe("Product.tsx", () => {
     const wrapper = render(
       <Provider store={store}>
         <Product 
-          a_strId="1"
+          a_iId={1}
           a_strTitle='The Test'
           a_iPrice={19.99}
           a_iRating={5}

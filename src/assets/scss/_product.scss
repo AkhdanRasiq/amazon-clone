@@ -26,10 +26,17 @@
 
 .product > button {
   background-color: $light-yellow-color;
+  border-radius: 2px;
+  height: 30px;
   border: 1px solid;
-  margin-top: 35px;
+  margin-top: 20px;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+
+  &:hover {
+    background-color: $dark-yellow-color;
+    cursor: pointer;
+  }
 }
 
 .productPrice {
@@ -38,5 +45,54 @@
 
 .productInfo {
   height: 100px;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
+}
+
+.productCheckout {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.productCheckoutInfo {
+  padding-left: 20px;
+}
+
+.productCheckoutImage {
+  object-fit: contain;
+  width: 180px;
+  height: 180px;
+}
+
+.productCheckoutInfoRating {
+  display: flex;
+}
+
+.productCheckoutInfoTitle {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.productCheckoutAction {
+  display: flex;
+}
+
+.productCheckoutAction > button {
+  background-color: $light-yellow-color;
+  border-radius: 2px;
+  border: 1px solid;
+  margin-top: 20px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+
+  &:hover {
+    background-color: $dark-yellow-color;
+    cursor: pointer;
+  }
+}
+
+.productCheckoutAction > p {
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
 }

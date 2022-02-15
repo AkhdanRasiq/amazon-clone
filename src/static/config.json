@@ -1,0 +1,12 @@
+{
+  "connection": {
+    "protocol"    : "http://",
+    "address"     : "127.0.0.1",
+    "port"        : ":8000"
+  },
+  "api": {
+    "base"        : "/api",
+    "products"    : "/products"
+  },
+  "alert_show_ms" : 3000
+}
