@@ -17,11 +17,12 @@ function Product({a_iId, a_strTitle, a_iPrice, a_iRating, a_strImage} : ProductP
   const dispatch = useAppDispatch()
   
   const data = {
-    id: a_iId,
-    title: a_strTitle,
-    price: a_iPrice,
-    rating: a_iRating,
-    image: a_strImage
+    id      : a_iId,
+    title   : a_strTitle,
+    price   : a_iPrice,
+    rating  : a_iRating,
+    image   : a_strImage,
+    qty     : 1
   }
 
   const addToBasket = () => {

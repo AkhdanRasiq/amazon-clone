@@ -11,7 +11,7 @@ interface IAlert {
 const initialState: IAlert = {
   status      : false,
   severity    : 'success' || 'info' || 'warning' || 'error' || undefined,
-  msg         : "Alert is Here!"
+  msg         : "Success add Item to Basket"
 }
 
 const alertSlice = createSlice({
@@ -21,7 +21,7 @@ const alertSlice = createSlice({
     setAlert: (state, action: PayloadAction<any>) => {
       state.status    = action.payload.status
       state.severity  = action.payload.severity || 'success'
-      state.msg       = action.payload.msg      || "Alert is Here!"
+      state.msg       = action.payload.msg      || "Success add Item to Basket"
     }
   }
 })
