@@ -1,5 +1,5 @@
 import React from 'react'
-import Product from '../../../components/Product/Product'
+import ProductCheckout from '../../../components/Product/ProductCheckout'
 import '../../../assets/scss/styles.scss'
 
 import { ComponentStory, ComponentMeta } from '@storybook/react'
@@ -9,16 +9,16 @@ import { Provider } from 'react-redux';
 
 
 export default {
-  title: 'Components/Product',
-  component: Product,
+  title: 'Components/ProductCheckout',
+  component: ProductCheckout,
   argTypes: {
     submit: { action: 'submitted' }
   }
-} as ComponentMeta<typeof Product>
+} as ComponentMeta<typeof ProductCheckout>
 
-const Template: ComponentStory<typeof Product> = (args: any) => (
+const Template: ComponentStory<typeof ProductCheckout> = (args: any) => (
   <Provider store={store}>
-    <Product {...args} />
+    <ProductCheckout {...args} />
   </Provider>
 )
 
@@ -29,5 +29,6 @@ Default.args = {
   a_strTitle:'Apple Pencil (2nd Generation)',
   a_iPrice:29.99,
   a_iRating:5,
-  a_strImage:"https://m.media-amazon.com/images/I/41S3MKU9TjL._AC_UL480_FMwebp_QL65_.jpg"
+  a_strImage:"https://m.media-amazon.com/images/I/41S3MKU9TjL._AC_UL480_FMwebp_QL65_.jpg",
+  a_iQty: 3
 }

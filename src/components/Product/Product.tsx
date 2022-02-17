@@ -5,7 +5,7 @@ import { addProduct } from '../../features/productSlice'
 import { setAlert } from '../../features/alertSlice'
 
 
-interface ProductProps {
+interface IProduct {
   a_iId       : number;
   a_strTitle  : string;
   a_iPrice    : number;
@@ -13,7 +13,7 @@ interface ProductProps {
   a_strImage  : string;
 }
 
-function Product({a_iId, a_strTitle, a_iPrice, a_iRating, a_strImage} : ProductProps) {
+function Product({a_iId, a_strTitle, a_iPrice, a_iRating, a_strImage} : IProduct) {
   const dispatch = useAppDispatch()
   
   const data = {

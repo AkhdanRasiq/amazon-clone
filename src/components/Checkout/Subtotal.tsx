@@ -7,19 +7,19 @@ import { selectProductList } from '../../features/productSlice'
 
 function Subtotal() {
   const [totalPrice, setTotalPrice] = useState<string>()
+  const [totalItem, setTotalItem]   = useState<string>()
   const productList                 = useAppSelector(selectProductList)
 
   useEffect(() => {
-    getTotalPrice()
+    updateSubtotal()
   }, [productList])
 
-  const getTotalPrice = () => {
+  const updateSubtotal = () => {
     setTotalPrice(() => {
-      let total = 0
-      for (let iProduct = 0; iProduct < productList.length; iProduct++) {
-        total += productList[iProduct].price * productList[iProduct].qty
-      }
-      return total.toFixed(2)
+      return productList.reduce((prev, cur) => prev + (cur.price * cur.qty), 0).toFixed(2).toString()
+    })
+    setTotalItem(() => {
+      return productList.reduce((prev, cur) => prev + cur.qty, 0).toString()
     })
   }
 
@@ -29,7 +29,7 @@ function Subtotal() {
         renderText={(value) => (
           <>
             <p>
-              Subtotal:
+              Subtotal ({totalItem} Items):
               <strong>{value}</strong>
             </p>
             <small className='subtotalGift'>

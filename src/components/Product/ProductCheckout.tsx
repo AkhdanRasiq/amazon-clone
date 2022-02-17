@@ -46,7 +46,7 @@ function ProductCheckout({ a_iId, a_strTitle, a_iPrice, a_iRating, a_strImage, a
           <strong>{a_iPrice}</strong>
         </p>
         <div className="productCheckoutInfoRating">
-          {ratingRender().map((item, index) => (
+          {ratingRender().map((item) => (
             item
           ))}
         </div>
