@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { useAppSelector, useAppDispatch } from '../../app/hooks'
-import { selectProductList, removeProduct, addProduct } from '../../features/productSlice'
+import { useAppDispatch } from '../../app/hooks'
+import { removeProduct, addProduct } from '../../features/productSlice'
 
-interface IProductCheckout {
+interface IProductCheckoutProps {
   a_iId       : number,
   a_strTitle  : string,
   a_iPrice    : number,
@@ -12,9 +12,8 @@ interface IProductCheckout {
   a_iQty      : number  
 }
 
-function ProductCheckout({ a_iId, a_strTitle, a_iPrice, a_iRating, a_strImage, a_iQty }: IProductCheckout) {
+function ProductCheckout({ a_iId, a_strTitle, a_iPrice, a_iRating, a_strImage, a_iQty }: IProductCheckoutProps) {
   const dispatach   = useAppDispatch()
-  const productList = useAppSelector(selectProductList)
 
   const onBtnAddProductClick = () => {
     dispatach(addProduct({ id: a_iId }))
@@ -51,9 +50,9 @@ function ProductCheckout({ a_iId, a_strTitle, a_iPrice, a_iRating, a_strImage, a
           ))}
         </div>
         <div className='productCheckoutAction'>
-          <button onClick={() => onBtnRemoveProductClick()}>─</button>
+          <button id='btnRemoveProduct' onClick={() => onBtnRemoveProductClick()}>─</button>
           <p>{a_iQty}</p>
-          <button onClick={() => onBtnAddProductClick()}>+</button>
+          <button id='btnAddProduct' onClick={() => onBtnAddProductClick()}>+</button>
         </div>
       </div>
     </div>

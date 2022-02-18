@@ -48,6 +48,8 @@ describe("Product.tsx", () => {
 
     expect(mockDispatchFn.mock.calls[0][0].payload).toStrictEqual(testData[0])
     expect(mockDispatchFn.mock.calls[1][0].payload).toStrictEqual({ status: true })
+
+    useDispatchSpy.mockClear()
   })
 
 })
