@@ -1,12 +1,8 @@
 import { AlertColor } from '@mui/material';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../app/store';
+import { IAlert } from '../utils/interface'
 
-interface IAlert {
-  status      : boolean,
-  severity    : AlertColor,
-  msg         : string
-}
 
 const initialState: IAlert = {
   status      : false,

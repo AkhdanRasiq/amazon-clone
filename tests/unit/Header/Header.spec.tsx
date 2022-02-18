@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import Header from "../../../src/components/Header/Header"
 
 describe("Header.tsx", () => {
-  const history = createMemoryHistory({ initialEntries: ['/'] });
+  const history = createMemoryHistory({ initialEntries: ['/'] })
 
   it("Render Properly", async () => {
     const wrapper = render(
@@ -28,8 +28,8 @@ describe("Header.tsx", () => {
           <Header />
         </Provider>
       </Router>
-    );
-    expect(history.location.pathname).toBe('/');
+    )
+    expect(history.location.pathname).toBe('/')
 
     const btnCheckout: HTMLElement  = container.querySelector('.headerNavOptionBasket') as HTMLElement
     btnCheckout.click()
@@ -37,6 +37,6 @@ describe("Header.tsx", () => {
 
     const btnHome: HTMLElement  = container.querySelector('.headerLogo') as HTMLElement
     btnHome.click()
-    expect(history.location.pathname).toBe('/');
+    expect(history.location.pathname).toBe('/')
   })
 })

@@ -28,7 +28,7 @@ function Subtotal() {
       <CurrencyFormat
         renderText={(value) => (
           <>
-            <p>
+            <p id='detailTotal'>
               Subtotal ({totalItem} Items):
               <strong>{value}</strong>
             </p>

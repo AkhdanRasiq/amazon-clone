@@ -83,7 +83,7 @@ Object {
               class="headerNavOptionItem headerNavBasketCount"
             >
               <p>
-                0
+                1
               </p>
             </span>
           </div>
@@ -170,7 +170,7 @@ Object {
             class="headerNavOptionItem headerNavBasketCount"
           >
             <p>
-              0
+              1
             </p>
           </span>
         </div>

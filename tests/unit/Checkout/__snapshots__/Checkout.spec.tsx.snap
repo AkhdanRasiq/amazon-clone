@@ -17,6 +17,68 @@ Object {
             >
               Your Shopping Basket
             </h2>
+            <div
+              class="productCheckout"
+            >
+              <div>
+                <img
+                  alt="product_img"
+                  class="productCheckoutImage"
+                  src="www.test.com"
+                />
+              </div>
+              <div
+                class="productCheckoutInfo"
+              >
+                <p
+                  class="productCheckoutInfoTitle"
+                >
+                  Test
+                </p>
+                <p
+                  class="productCheckoutInfoPrice"
+                >
+                  <small>
+                    $
+                  </small>
+                  <strong>
+                    19.99
+                  </strong>
+                </p>
+                <div
+                  class="productCheckoutInfoRating"
+                >
+                  <p>
+                    ⭐
+                  </p>
+                  <p>
+                    ⭐
+                  </p>
+                  <p>
+                    ⭐
+                  </p>
+                  <p>
+                    ⭐
+                  </p>
+                  <p>
+                    ⭐
+                  </p>
+                </div>
+                <div
+                  class="productCheckoutAction"
+                >
+                  <button>
+                    ─
+                  </button>
+                  <p>
+                    3
+                  </p>
+                  <button>
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -25,12 +87,14 @@ Object {
           <div
             class="subtotal"
           >
-            <p>
+            <p
+              id="detailTotal"
+            >
               Subtotal (
-              0
+              3
                Items):
               <strong>
-                $0.00
+                $59.97
               </strong>
             </p>
             <small
@@ -62,6 +126,68 @@ Object {
           >
             Your Shopping Basket
           </h2>
+          <div
+            class="productCheckout"
+          >
+            <div>
+              <img
+                alt="product_img"
+                class="productCheckoutImage"
+                src="www.test.com"
+              />
+            </div>
+            <div
+              class="productCheckoutInfo"
+            >
+              <p
+                class="productCheckoutInfoTitle"
+              >
+                Test
+              </p>
+              <p
+                class="productCheckoutInfoPrice"
+              >
+                <small>
+                  $
+                </small>
+                <strong>
+                  19.99
+                </strong>
+              </p>
+              <div
+                class="productCheckoutInfoRating"
+              >
+                <p>
+                  ⭐
+                </p>
+                <p>
+                  ⭐
+                </p>
+                <p>
+                  ⭐
+                </p>
+                <p>
+                  ⭐
+                </p>
+                <p>
+                  ⭐
+                </p>
+              </div>
+              <div
+                class="productCheckoutAction"
+              >
+                <button>
+                  ─
+                </button>
+                <p>
+                  3
+                </p>
+                <button>
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div
@@ -70,12 +196,14 @@ Object {
         <div
           class="subtotal"
         >
-          <p>
+          <p
+            id="detailTotal"
+          >
             Subtotal (
-            0
+            3
              Items):
             <strong>
-              $0.00
+              $59.97
             </strong>
           </p>
           <small

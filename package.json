@@ -33,7 +33,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.ts src/**/*.tsx tests/**/*.tsx",
+    "lint": "eslint src/**/*.ts src/**/*.tsx tests/**/*.tsx tests/**/*.ts",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:unit-band": "jest --runInBand",

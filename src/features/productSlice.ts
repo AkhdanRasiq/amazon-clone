@@ -1,19 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../app/store';
-
-
-interface IProduct {
-  id      : number,
-  title   : string,
-  price   : number,
-  rating  : number,
-  image   : string,
-  qty     : number  
-}
-
-interface IProductList {
-  productList: Array<IProduct>
-}
+import { IProductList } from '../utils/interface'
 
 const initialState: IProductList = {
   productList: []

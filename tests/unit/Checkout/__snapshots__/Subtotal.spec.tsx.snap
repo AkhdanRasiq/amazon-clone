@@ -8,12 +8,14 @@ Object {
       <div
         class="subtotal"
       >
-        <p>
+        <p
+          id="detailTotal"
+        >
           Subtotal (
-          0
+          3
            Items):
           <strong>
-            $0.00
+            $59.97
           </strong>
         </p>
         <small
@@ -34,12 +36,14 @@ Object {
     <div
       class="subtotal"
     >
-      <p>
+      <p
+        id="detailTotal"
+      >
         Subtotal (
-        0
+        3
          Items):
         <strong>
-          $0.00
+          $59.97
         </strong>
       </p>
       <small

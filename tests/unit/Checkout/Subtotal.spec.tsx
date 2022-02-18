@@ -4,21 +4,8 @@ import { store } from '../../../src/app/store'
 import { Provider } from 'react-redux'
 
 import Subtotal from "../../../src/components/Checkout/Subtotal"
-import reducer, { addProduct } from "../../../src/features/productSlice"
-import { AnyAction } from '@reduxjs/toolkit'
+import { productListWithData_mockData } from '../../mockData/product_mockData'
 
-interface IProduct {
-  id      : number,
-  title   : string,
-  price   : number,
-  rating  : number,
-  image   : string,
-  qty     : number  
-}
-
-interface IProductList {
-  productList: Array<IProduct>
-}
 
 describe("Subtotal.tsx", () => {
   it("Render Properly", async () => {
@@ -29,33 +16,18 @@ describe("Subtotal.tsx", () => {
     )
     await expect(wrapper).toMatchSnapshot()
   })
+  
+  it('subtotal should calculate data passed from redux', () => {
+    const { container } = render(
+      <Provider store={store}>
+        <Subtotal />
+      </Provider>
+    )
 
-  it('should return the initial state', () => {
-    expect(reducer(undefined, {} as AnyAction)).toEqual(
-    {
-      productList: []
-    })
-  })
+    const subtotalDetail: HTMLElement  = container.querySelector('#detailTotal') as HTMLElement
+    const productData = productListWithData_mockData.productList[0]
 
-  it('should handle a todo being added to an empty list', () => {
-    const previousState: IProductList = {
-      productList: []
-    }
-
-    const data = {
-      id      : 1,
-      title   : "Test",
-      price   : 19.99,
-      rating  : 5,
-      image   : "www.test.com",
-      qty     : 1
-    }
-
-    expect(reducer(previousState, addProduct(data))).toEqual({
-      productList: [
-      { 
-        ...data
-      }]
-    })
+    expect(subtotalDetail.innerHTML)
+    .toBe(`Subtotal (${productData.qty} Items):<strong>$${productData.price * productData.qty}</strong>`)
   })
 })
