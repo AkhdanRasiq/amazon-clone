@@ -1,4 +1,3 @@
-import { AlertColor } from '@mui/material';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../app/store';
 import { IAlert } from '../utils/interface'

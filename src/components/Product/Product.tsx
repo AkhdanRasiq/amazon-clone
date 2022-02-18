@@ -5,7 +5,7 @@ import { addProduct } from '../../features/productSlice'
 import { setAlert } from '../../features/alertSlice'
 
 
-interface IProduct {
+interface IProductProps {
   a_iId       : number;
   a_strTitle  : string;
   a_iPrice    : number;
@@ -13,7 +13,7 @@ interface IProduct {
   a_strImage  : string;
 }
 
-function Product({a_iId, a_strTitle, a_iPrice, a_iRating, a_strImage} : IProduct) {
+function Product({a_iId, a_strTitle, a_iPrice, a_iRating, a_strImage} : IProductProps) {
   const dispatch = useAppDispatch()
   
   const data = {
@@ -48,7 +48,7 @@ function Product({a_iId, a_strTitle, a_iPrice, a_iRating, a_strImage} : IProduct
       </div>
 
       <img src={a_strImage} alt="product_img" />
-      <button onClick={() => addToBasket()}>Add to Basket</button>
+      <button id='btnAddToBasket' onClick={() => addToBasket()}>Add to Basket</button>
     </div>
   )
 }
